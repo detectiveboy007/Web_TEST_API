@@ -23,18 +23,7 @@ namespace Web_TEST_API.Controllers
             _npRepo = npRepo;
             _mapper = mapper;
         }
-        //[HttpGet]
-        //[ProducesResponseType(200, Type = typeof(List<TESTAgentDto>))]
-        //public IActionResult GetTESTAgent()
-        //{
-        //    var objList = _npRepo.GetTESTAgent();
-        //    var objDto = new List<TESTAgentDto>();
-        //    foreach (var obj in objList)
-        //    {
-        //        objDto.Add(_mapper.Map<TESTAgentDto>(obj));
-        //    }
-        //    return Ok(objDto);
-        //}
+
         [HttpGet("{TESTAgentId}", Name = "GetTESTAgent")]
         [ProducesResponseType(200, Type = typeof(TESTAgentDto))]
         [ProducesResponseType(404)]
